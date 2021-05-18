@@ -14,7 +14,7 @@ he = 0
 class Clock(Thread):
     def run(self) -> None:
         global t
-        while t<3:
+        while t<300:
             time.sleep(1)
             t=t+1
 
@@ -24,7 +24,7 @@ class Cook(Thread):
     def run(self) -> None:
         global cumas
         global he
-        while t<3:
+        while t<300:
             if cumas>=300:
                 print("篮子满了")
                 time.sleep(3)
@@ -43,7 +43,7 @@ class Cliant(Thread):
         def run(self) -> None:
             global cumas
 
-            while t<3:
+            while t<300:
                 if cumas>0:
                     cumas=cumas-1
                     self.count1=self.count1+1
